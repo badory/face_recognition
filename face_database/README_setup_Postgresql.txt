@@ -54,3 +54,24 @@ Now you want to go to your database and add the extension.
 For this I just used my GUI and ran the following:
 
 CREATE EXTENSION cube
+	
+
+Postgresql Dump .dmp file is provided if you want to import my
+exact database schema:
+restoring database from .dmp file
+$ psql dbname < infile
+
+Making a dump:
+pg_dump -U postgres -s postgres > exportFile.dmp
+
+
+GUI app examples:
+FaceRecognition.py & LoadDatabase.py
+
+
+command_line_interface:
+includes same apps but stripped of GUI just includes command line
+$ python3 load_db.py <filename *.jpg *.png> <firstname> <lastname>
+$ python3 face_rec.py <filename *.jpg *.png>
+
+
